@@ -1,0 +1,269 @@
+* {
+  padding:0;
+  margin:0;
+}
+
+body {
+  font-family:Arial, Verdana, sans-serif;
+}
+
+.header {
+  height:150px;
+  background-image:url("../img/logo.png"), url("../img/fondo.jpg");
+  background-size:100px, cover;
+  background-position:50% 90%, 50% 15%;
+  background-repeat:no-repeat;
+}
+
+.header svg {
+  position:absolute;
+  top:20px;
+  right:20px;
+  cursor:pointer;
+}
+
+.nav {
+  background-color:#EE1E22;
+  font-weight:bold;
+}
+
+.nav .lista {
+  display:flex;
+  list-style:none;
+  justify-content:space-evenly;
+  line-height:50px;
+  flex-direction:column;
+  display:none;
+}
+
+.nav .item {
+  text-align:center;
+}
+
+.nav .link {
+  display:block;
+  color:white;
+  text-decoration:none;
+}
+
+.nav .link:hover, .nav .link.active {
+  background-color:#C70003;
+}
+
+.main {
+  display:flex;
+  flex-direction:column;
+}
+
+.izq {
+  box-sizing:border-box;
+  width:100%;
+  padding:20px;
+}
+
+.izq .titulo {
+  background-color:#EE1E22;
+  padding:10px;
+  color:white;
+}
+
+.izq .intro {
+  position:relative;
+  margin:10px 0;
+  text-align:justify;
+}
+
+.izq .intro::before, .izq .intro::after {
+  position:absolute;
+  content:"\"";
+  font-size:48px;
+  font-style:italic;
+  font-weight:normal;
+  color:#EE1E22;
+}
+
+.izq .intro::before {
+  position:absolute;
+  top:-7px;
+  left:-5px;
+}
+
+.izq .intro::after {
+  bottom:-29px;
+}
+
+.izq .intro .importante {
+  padding-left:20px;
+  color:#EE1E22;
+}
+
+.izq .personajes {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+.izq .personaje {
+  position:relative;
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #EE1E22;
+  padding:10px;
+  margin-bottom:20px;
+  background-color:#B00004;
+  color:white;
+  padding-bottom:70px;
+  text-align:justify;
+}
+
+.izq .personaje:nth-last-child(1), .izq .personaje:nth-last-child(2) {
+  margin-bottom:0;
+}
+
+.personaje:nth-child(odd) .imagen {
+  border-bottom-left-radius:100px;
+}
+
+.personaje:nth-child(even) .imagen {
+  border-bottom-right-radius:100px;
+}
+
+.personaje .nombre {
+  background-color:#EE1E22;
+  color:white;
+  padding:5px;
+  text-align:center;
+  border:3px solid white;
+  border-bottom:none;
+}
+
+.personaje .imagen {
+  width:100%;
+  margin-bottom:10px;
+  border:3px solid white;
+  border-top:none;
+  box-sizing:border-box;
+}
+
+.personaje p {
+  margin-bottom:10px;
+}
+
+.personaje .ver-mas {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:20px 0;
+  text-transform:uppercase;
+  display:block;
+  background-color:white;
+  width:calc(100% - 20px);
+  box-sizing:border-box;
+  text-align:center;
+  text-decoration:none;
+  color:#EE1E22;
+  font-weight:bold;
+}
+
+.personaje .ver-mas:hover {
+  background-color:#EE1E22;
+  color:white;
+}
+
+.der {
+  box-sizing:border-box;
+  width:100%;
+  padding:20px;
+  border-left:1px solid #EE1E22;
+}
+
+.der .titulo {
+  background-color:#EE1E22;
+  padding:10px;
+  color:white;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.pelicula {
+  border:1px solid #B00004;
+  padding:10px;
+  margin-bottom:10px;
+  background-color:#EE1E22;
+  color:white;
+  text-align:justify;
+}
+
+.pelicula .nombre {
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.pelicula .imagen {
+  width:100%;
+  margin-bottom:10px;
+  box-sizing:border-box;
+  border:3px solid white;
+  border-bottom-right-radius:100px;
+}
+
+.pelicula .ver-mas {
+  display:block;
+  text-align:center;
+  color:white;
+  background-color:white;
+  color:#EE1E22;
+  margin-top:10px;
+  font-weight:bold;
+  padding:10px 0;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.pelicula .ver-mas:hover {
+  background-color:#B00004;
+  color:white;
+}
+
+.footer {
+  background-color:#EE1E22;
+  font-weight:bold;
+  padding:100px 0;
+  text-align:center;
+  color:white;
+}
+
+
+@media (min-width: 1025px) {
+  .header {
+    height:350px;
+    background-size:200px, cover;
+  }
+
+  .header svg {
+    display: none;
+  }
+
+  .nav .lista {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav .item {
+    width:20%;
+    text-align:center;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+
+  .izq {
+    width:75%;
+    padding:20px;
+  }
+
+  .der {
+    width:25%;
+  }
+}

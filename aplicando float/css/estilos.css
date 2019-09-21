@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700i');
+
+* { box-sizing: border-box; margin:0; }
+body { font: 90% 'Lato', sans-serif;  color: #333;}
+#encabezado, #pie { padding: 1em; width: 100%; background-color: #a9a9a9; height:90px;  }
+
+#encabezado img { width: 50px; float:left; }
+
+main { width: 100%;  
+	background-color: lightgray;
+}
+
+img { width: 15%; float: left; }
+main section, main article { width: 100%; overflow: hidden;   }
+#seccion-empresa {  background-color: lightgreen; }
+
+
+#seccion-empresa + section { background-color:pink;    }
+
+article { height: 200px; background-color: lightblue; }
+
+
+
+

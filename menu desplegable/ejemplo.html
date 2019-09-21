@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MENU DESPLEGABLE</title>
+
+	<style>
+	ul { margin: 0; padding: 0; list-style: none; }
+#barra { width: 100%; padding-top: 10px; box-sizing: border-box; height: 70px; background: green; border:1px dashed black; display: flex; flex-direction: row;}
+
+a { text-decoration: none; color: white; display: block; width: 100px; height: 50px; margin-left: 5px; line-height: 50px;  text-align: center;}
+
+a:link, a:visited { background: #fff; color: #000; }
+a:hover { background: lightgreen; color: coral; }
+
+a:active { background: lightBlue; color: #333; }
+
+#login { margin-left: auto; margin-right: 10px ; }
+
+#submenu { width: 200px; overflow: hidden; display:none; flex-direction: column; position: absolute; left: 115px; top: 70px;  }
+#submenu a { background: black; color: white; height: 30px;  line-height: 30px; margin: 5px 0;}
+.menuPrincipal { position: relative;}
+
+.menuPrincipal:hover +  #submenu { display: flex;} 
+	</style>
+
+
+</head>
+<body>
+
+
+<nav>
+<ul id="barra">
+<li>
+<a href="#">INICIO </a> </li>
+<li > 
+<a href="#" class="menuPrincipal" >SERVICIOS </a><ul id="submenu"><li> <a href="#"> SERVICIOS 1 </a></li><li> <a href="#"> SERVICIOS 2 </a></li> </ul></li><li> <a href="#"> CONTACTO</a> </li>
+
+<li id="login">
+
+<a href="#"> LOGIN </a></li> </ul>
+
+</nav>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Clase 03</title>
+		<meta charset="utf-8">
+		<style>
+			h1 { display: none; }
+		</style>
+	</head>
+	<body>
+		<h1>Titulo</h1>
+		<button>Mostrar</button>
+
+		<script>
+			const h1 = document.querySelector('h1');
+			const button = document.querySelector('button');
+			
+			button.addEventListener('click', e => {
+				if (!h1.style.display) {
+					h1.style.display = 'block';
+					button.textContent = 'Ocultar';
+				} else {
+					h1.style.display = '';
+					button.textContent = 'Mostrar';
+				}
+			});
+			
+		</script>
+	</body>
+</html>
